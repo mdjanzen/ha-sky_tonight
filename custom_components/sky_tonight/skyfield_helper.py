@@ -96,11 +96,11 @@ def get_astral_event_next(
     # where events indicate the type of event (0 for setting)
     if event == SUN_EVENT_SUNRISE:
         times, events = find_risings(
-            observer, eph[BODIES_DICT[celestial_object]], t0, t1
+            observer, eph[BODIES_DICT[celestial_object.lower()]], t0, t1
         )
     elif event == SUN_EVENT_SUNSET:
         times, events = find_settings(
-            observer, eph[BODIES_DICT[celestial_object]], t0, t1
+            observer, eph[BODIES_DICT[celestial_object.lower()]], t0, t1
         )
     else:
         raise ValueError("Unsupported event type")
@@ -144,7 +144,10 @@ def get_astral_position(
     # Replace with your actual coordinates
     observer = Topos(location.latitude, location.longitude, elevation_m=elevation)
     apparent = (
-        (earth + observer).at(t).observe(eph[BODIES_DICT[celestial_object]]).apparent()
+        (earth + observer)
+        .at(t)
+        .observe(eph[BODIES_DICT[celestial_object.lower()]])
+        .apparent()
     )
 
     alt, az, distance = apparent.altaz()

@@ -24,7 +24,7 @@ STATE_ATTR_NEXT_SETTING = "next_setting"
 BODIES = [
     "Sun",
     "Moon",
-    "Mrcury",
+    "Mercury",
     "Venus",
     "Mars",
     "Jupiter",

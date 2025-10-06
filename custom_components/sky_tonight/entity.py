@@ -96,7 +96,7 @@ class CelestialBody(Entity):
     def __init__(self, obj: str, hass: HomeAssistant) -> None:
         """Initialize the body."""
         self._attr_name = obj
-        self.object = obj
+        self.object = obj.capitalize()
         self.entity_id = "sky_tonight." + obj.lower()
 
         self.hass = hass

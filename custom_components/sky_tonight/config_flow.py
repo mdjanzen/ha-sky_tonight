@@ -34,9 +34,16 @@ class SkyTonightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         schema = vol.Schema(
             {
-                vol.Required("bodies", default=["sun", "moon"]): cv.multi_select(
-                    AVAILABLE_BODIES
-                )
+                vol.Required(
+                    "bodies",
+                    default=[
+                        "mercury",
+                        "venus",
+                        "mars",
+                        "jupiter",
+                        "saturn",
+                    ],
+                ): cv.multi_select(AVAILABLE_BODIES)
             }
         )
 
@@ -74,7 +81,17 @@ class SkyTonightOptionsFlowHandler(OptionsFlowWithReload):
 
         # Use current options or fallback to original data
         current = self.config_entry.options.get(
-            "bodies", self.config_entry.data.get("bodies", ["sun", "moon"])
+            "bodies",
+            self.config_entry.data.get(
+                "bodies",
+                [
+                    "mercury",
+                    "venus",
+                    "mars",
+                    "jupiter",
+                    "saturn",
+                ],
+            ),
         )
 
         schema = vol.Schema(

@@ -13,6 +13,13 @@ A Home Assistant custom integration that uses [Skyfield](https://rhodesmill.org/
 5) Search for 'Sky Tonight' and click the three dot menu besides it.
 6) Click Download.
 7) Finally, refresh your browser window.
+8) Restart Home Assistant
+9) Navigate to Settings > Devices & services
+10) Click add integtion at the bottom right
+11) Search for 'Sky Tonight' 
+12) Click to Add
+13) Select the celestial objects you care about
+14) Click submit
 
 
 ### Manual
