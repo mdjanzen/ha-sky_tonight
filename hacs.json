@@ -1,0 +1,7 @@
+{
+  "name": "Sky Tonight",
+  "content_in_root": false,
+  "domains": ["sky_tonight"],
+  "homeassistant": "2024.6.0",
+  "render_readme": true
+}

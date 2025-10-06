@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "[%key:common::config_flow::description::confirm_setup%]"
+      }
+    }
+  },
+  "entity_component": {
+    "_": {
+      "name": "[%key:component::sun::title%]",
+      "state": {
+        "above_horizon": "Above horizon",
+        "below_horizon": "Below horizon"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "next_rising": { "name": "Next rising" },
+      "next_setting": { "name": "Next setting" },
+      "solar_azimuth": { "name": "Azimuth" },
+      "solar_elevation": { "name": "Elevation" }
+    }
+  }
+}

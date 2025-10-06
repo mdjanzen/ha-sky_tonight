@@ -1,0 +1,15 @@
+{
+  "domain": "sky_tonight",
+  "name": "SkyTonight",
+  "version": "1.0.0",
+  "codeowners": [
+    "@mdjanzen"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/mdjanzen/ha-sky_tonight",
+  "issue_tracker": "https://github.com/mdjanzen/ha-sky_tonight/issues",
+  "iot_class": "calculated",
+  "quality_scale": "bronze",
+  "requirements": ["skyfield"]
+}
