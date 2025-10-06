@@ -10,17 +10,20 @@
     "_": {
       "name": "[%key:component::sun::title%]",
       "state": {
-        "above_horizon": "Above horizon",
-        "below_horizon": "Below horizon"
+        "above_horizon": "above horizon",
+        "below_horizon": "below horizon"
       }
     }
   },
   "entity": {
     "sensor": {
-      "next_rising": { "name": "Next rising" },
-      "next_setting": { "name": "Next setting" },
-      "solar_azimuth": { "name": "Azimuth" },
-      "solar_elevation": { "name": "Elevation" }
+      "next_rising": { "name": "next rising" },
+      "next_setting": { "name": "next setting" },
+      "solar_azimuth": { "name": "azimuth" },
+      "solar_elevation": { "name": "elevation" }
     }
   }
+  ,
+  "single_instance_allowed": "SkyTonight supports only one configuration. Adding additional ones is not needed.",
+  "single_instance_allowed_title": "This integration allows only one configuration."
 }

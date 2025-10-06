@@ -25,7 +25,9 @@ class SkyTonightConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
     async def async_step_user(self, user_input: dict | None = None) -> FlowResult:
         if self._async_current_entries():
-            return self.async_abort(reason="single_instance_allowed")
+            return self.async_abort(
+                reason="SkyTonight supports only one configuration. Adding additional ones is not needed."
+            )
 
         """Handle the initial setup step."""
         if user_input is not None:

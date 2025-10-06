@@ -153,7 +153,7 @@ class SunSensor(RestoreSensor, SensorEntity):
         self._attr_unique_id = f"{entry_id}-{celBody.object}-{entity_description.key}"
         self.body = celBody
         self._attr_device_info = DeviceInfo(
-            name=celBody.object,
+            name=celBody.object.capitalize(),
             identifiers={(DOMAIN, f"{entry_id}-{celBody.object}")},
             entry_type=DeviceEntryType.SERVICE,
         )
